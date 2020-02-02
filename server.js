@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const requireDir = require("require-dir");
 
+//permitindo que o express envie dados via json
+app.use(express.json());
+
 //instanciando o orm mongoose e realizando a conexão
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:17017/nodeapi", { useNewUrlParser: true });
